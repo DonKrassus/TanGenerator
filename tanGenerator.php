@@ -24,13 +24,13 @@
         $passwort = "";
         // die variable $dbport wird in meinem Fall benötigt da ich in der IDE Cloud9 
         // arbeite und nur so Zugriff auf die SQL-Datenbank bekam.
-        //$dbport = 3306;
+        //$dbport = "";
         // in der Datenbank wird die Tabelle "tanliste" abgefragt nach folgendem Aufbau
         // "CREATE TABLE tanliste (id int NOT NULL AUTO_INCREMENT, tan varchar(6), verwendet tinyint, PRIMARY KEY(id));"
         $tblname = "tanliste";
         // Spalte "verwendet" zur späteren Nutzung
         $verwendet = null;
-        // verwendeung der $dbport
+        // verwendung der $dbport
         $con = mysqli_connect($servername, $username, $passwort, $dbname/*, $dbport*/);
         if ($con->connect_error) {
             die("Verbindung fehlgeschlagen: " . $con->connect_error);
